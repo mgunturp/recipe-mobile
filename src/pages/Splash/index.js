@@ -1,6 +1,7 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React, {useEffect} from 'react'
-import {logo, splashbg} from "../../assets"
+import {splashbg} from "../../assets"
+import Mamarecipe from "../../assets/images/mamarecipe.svg"
 
 
 
@@ -14,6 +15,7 @@ const Splash = ({navigation}) => {
   
   return (
     <ImageBackground source={splashbg} style={styles.background}>
+      <Mamarecipe height="40%" width="40%"></Mamarecipe>
       <Text style={styles.text}>Mama Recipe</Text>
     </ImageBackground>
   )
@@ -31,6 +33,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize:45,
     fontWeight: 'bold',
-    color:'white'
+    color:'white',
+    marginTop:-70,
+    marginBottom:40
   }
 }) 

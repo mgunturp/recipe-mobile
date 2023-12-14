@@ -11,7 +11,7 @@ const MainApp = () => {
   return (
 
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false}} />
       <Tab.Screen name="UploadRecipe" component={UploadRecipe} />
       <Tab.Screen name="Chat" component={Chat} />
       <Tab.Screen name="Profile" component={Profile} />
@@ -23,7 +23,7 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName='Splash'>
+    <Stack.Navigator initialRouteName='MainApp'>
         <Stack.Screen name="Splash" component={Splash} options={{headerShown:false}}/>
         <Stack.Screen name="MainApp" component={MainApp} options={{headerShown:false}}/>
     </Stack.Navigator>
